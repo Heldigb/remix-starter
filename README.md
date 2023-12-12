@@ -1,3 +1,20 @@
+# Start new project and connect to github
+
+…or create a new repository on the command line
+echo "# remix-starter" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Heldigb/remix-starter.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/Heldigb/remix-starter.git
+git branch -M main
+git push -u origin main
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
 # Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)
@@ -83,3 +100,5 @@ netlify deploy --build
 # production deployment
 netlify deploy --build --prod
 ```
+
+
