@@ -1,33 +1,30 @@
 {
-  "name": "my-remix-app",
+  "name": "",
   "private": true,
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "npm run redirects:enable && remix build",
-    "dev": "npm run redirects:disable && remix dev",
+    "build": "remix build",
+    "dev": "remix dev --manual -c \"ntl dev --framework=#static\"",
     "start": "netlify serve",
-    "typecheck": "tsc -b",
-    "redirects:enable": "shx cp .redirects public/_redirects",
-    "redirects:disable": "shx rm -f public/_redirects"
+    "typecheck": "tsc -b"
   },
   "dependencies": {
-    "@netlify/functions": "^2.0.0",
-    "@netlify/remix-adapter": "^2.0.0",
+    "@netlify/edge-functions": "^2.0.0",
+    "@netlify/remix-edge-adapter": "^3.0.0",
+    "@netlify/remix-runtime": "^2.0.0",
     "@remix-run/react": "^2.3.1",
     "cross-env": "^7.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "shx": "^0.3.4",
-    "prettier": "^3.0.3"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.3.1",
     "@remix-run/eslint-config": "^2.3.1",
     "@remix-run/serve": "^2.3.1",
-    "@types/react": "18.2.0",
-    "@types/react-dom": "18.2.0",
-    "eslint": "8.27.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^8.27.0",
     "typescript": "^5.2.2"
   },
   "engines": {
